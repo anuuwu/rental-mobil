@@ -76,6 +76,7 @@
             this.btnsavepelanggan.TabIndex = 27;
             this.btnsavepelanggan.Text = "SAVE";
             this.btnsavepelanggan.UseVisualStyleBackColor = true;
+            this.btnsavepelanggan.Click += new System.EventHandler(this.btnsavepelanggan_Click);
             // 
             // txtalamat
             // 
