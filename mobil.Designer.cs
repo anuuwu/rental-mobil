@@ -44,6 +44,8 @@
             this.txtidmobil = new System.Windows.Forms.TextBox();
             this.Label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.dgvmobil = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvmobil)).BeginInit();
             this.SuspendLayout();
             // 
             // btndeletemobil
@@ -54,6 +56,7 @@
             this.btndeletemobil.TabIndex = 29;
             this.btndeletemobil.Text = "DELETE";
             this.btndeletemobil.UseVisualStyleBackColor = true;
+            this.btndeletemobil.Click += new System.EventHandler(this.btndeletemobil_Click);
             // 
             // btnupdatemobil
             // 
@@ -72,6 +75,7 @@
             this.btnsavemobil.TabIndex = 27;
             this.btnsavemobil.Text = "SAVE";
             this.btnsavemobil.UseVisualStyleBackColor = true;
+            this.btnsavemobil.Click += new System.EventHandler(this.btnsavemobil_Click);
             // 
             // txthargasewa
             // 
@@ -178,11 +182,21 @@
             this.label7.TabIndex = 30;
             this.label7.Text = "REGISTRASI MOBIL";
             // 
+            // dgvmobil
+            // 
+            this.dgvmobil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvmobil.Location = new System.Drawing.Point(23, 473);
+            this.dgvmobil.Name = "dgvmobil";
+            this.dgvmobil.RowTemplate.Height = 28;
+            this.dgvmobil.Size = new System.Drawing.Size(418, 114);
+            this.dgvmobil.TabIndex = 31;
+            // 
             // mobil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 511);
+            this.ClientSize = new System.Drawing.Size(466, 599);
+            this.Controls.Add(this.dgvmobil);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btndeletemobil);
             this.Controls.Add(this.btnupdatemobil);
@@ -201,6 +215,8 @@
             this.Controls.Add(this.Label1);
             this.Name = "mobil";
             this.Text = "mobil";
+            this.Load += new System.EventHandler(this.mobil_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvmobil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +240,6 @@
         internal System.Windows.Forms.TextBox txtidmobil;
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridView dgvmobil;
     }
 }
