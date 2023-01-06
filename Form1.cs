@@ -22,7 +22,7 @@ namespace login
         {
             {
                 SqlConnection koneksi = new SqlConnection("Data Source=;Initial Catalog=mobilRental;Integrated Security=True");
-                SqlDataAdapter sda = new SqlDataAdapter("select count (*) from Login where NamaUser = '" +txtuser.Text+ "' and Password = '" +txtpass.Text+ "'", koneksi);
+                SqlDataAdapter sda = new SqlDataAdapter("select count (*) from operator where userId = '" +txtuser.Text+ "' and password = '" +txtpass.Text+ "'", koneksi);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 if (dt.Rows[0][0].ToString() == "1")
@@ -36,6 +36,11 @@ namespace login
                     MessageBox.Show("Mohon isi Username dan Password anda dengan benar !", "Perhatian", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
